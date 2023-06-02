@@ -209,17 +209,66 @@ class MainMenu extends Phaser.Scene
 
     preload()
     {
-
+        this.load.path = '../assets/';
+        this.load.image('title_background', 'Cinematic Title Art.png');
+        this.load.image('title', 'CinematicTitle.png');
     }
 
     create()
     {
+        this.canvasWidth = this.sys.game.canvas.width;
+        this.canvasHeight = this.sys.game.canvas.height;
+        this.backgroundScale = this.canvasWidth/720;
+        this.titleScale = (this.canvasWidth/106) * 0.65;
+        this.add.image(this.canvasWidth/2, this.canvasHeight, 'title_background').setOrigin(0.5, 1).setScale(this.backgroundScale);
+        this.title = this.add.image(30, 30, 'title').setOrigin(0, 0).setScale(this.titleScale);
 
+        this.startText = this.add.text(-300, this.title.displayHeight + 100, "START", {
+            'fontSize': '50px',
+            'color': '#ffffff',
+            'align': 'left',
+            'fontStyle': 'bold'
+        }).setOrigin(0, .5);
+        this.settingsText = this.add.text(-450, this.title.displayHeight + 175, "SETTINGS", {
+            'fontSize': '50px',
+            'color': '#ffffff',
+            'align': 'left',
+            'fontStyle': 'bold'
+        }).setOrigin(0, .5);
+        this.exitText = this.add.text(-600, this.title.displayHeight + 250, "EXIT", {
+            'fontSize': '50px',
+            'color': '#ffffff',
+            'align': 'left',
+            'fontStyle': 'bold'
+        }).setOrigin(0, .5);
     }
 
     update()
     {
-        
+        if(this.startText.x < 100)
+        {
+            this.startText.x += 10;
+        }
+        else
+        {
+            this.startText.x = 100;
+        }
+        if(this.settingsText.x < 100)
+        {
+            this.settingsText.x += 10;
+        }
+        else
+        {
+            this.settingsText.x = 100;
+        }
+        if(this.exitText.x < 100)
+        {
+            this.exitText.x += 10;
+        }
+        else
+        {
+            this.exitText.x = 100;
+        }
     }
 }
 
