@@ -223,6 +223,8 @@ class MainMenu extends Phaser.Scene
         this.add.image(this.canvasWidth/2, this.canvasHeight, 'title_background').setOrigin(0.5, 1).setScale(this.backgroundScale);
         this.title = this.add.image(30, 30, 'title').setOrigin(0, 0).setScale(this.titleScale);
 
+        this.add.rectangle(70, this.title.displayHeight + 50, 300, 260, 0xaaaaaa, .5).setOrigin(0,0);
+
         this.startText = this.add.text(-300, this.title.displayHeight + 100, "START", {
             'fontSize': '50px',
             'color': '#ffffff',
