@@ -7,7 +7,7 @@ class SplashScreen extends Phaser.Scene
 
     preload()
     {
-        this.load.path = '../assets/';
+        this.load.path = './assets/';
         this.load.image('studioArt', 'TurkeuBaconGames.png');
         this.load.audio('studioJingle', 'Studio Intro.wav');
     }
@@ -69,7 +69,7 @@ class Intro extends Phaser.Scene
 
     preload()
     {
-        this.load.path = '../assets/';
+        this.load.path = './assets/';
         this.load.image('richard', 'Richard.png');
         this.load.image('background', 'CinematicBackground.png');
         this.load.audio('music', 'Cinematic Music.wav');
@@ -209,7 +209,7 @@ class MainMenu extends Phaser.Scene
 
     preload()
     {
-        this.load.path = '../assets/';
+        this.load.path = './assets/';
         this.load.image('title_background', 'Cinematic Title Art.png');
         this.load.image('title', 'CinematicTitle.png');
     }
