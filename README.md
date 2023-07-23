@@ -1,7 +1,7 @@
 # CMPM120_Cinematic
 All visual assets were created by me in GIMP, where they were then exported as png's <br />
 All Audio assets were created by me in MuseScore, were they were then exported as wav's <br />
-Richard.png is based on a frog plush an anonymous friend made and gifted to me. The asset used in game is pixel art I made of their plush.
+Richard.png is based on a frog plush a friend made and gifted to me. The asset used in game is pixel art I made of their plush.
 <br />
 
 Requirements: <br />
